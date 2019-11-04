@@ -15,3 +15,9 @@ nav {
 #logo {
   font-family: 'Bungee', cursive;
 }
+
+.fa-angle-double-down {
+  color: crimson;
+  position: relative;
+  left: 50%;
+}
