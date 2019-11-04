@@ -1,0 +1,27 @@
+.new-tweet {
+  margin: auto;
+ /* display: flex; */
+}
+.new-tweet textarea{
+  width: 100%;
+  background-color: inherit;
+  border: 0px solid;
+  border-bottom: 5px solid grey; 
+  color: grey;
+  font-weight: 700;
+}
+
+.new-tweet form input{
+  background-color: #4056A1;
+  color: #FFFF;
+  font-weight: 700;
+  font-family: 'Bungee', cursive;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+.counter{
+  font-family: 'Bungee', cursive;
+  color: grey;
+  float: right;
+}
