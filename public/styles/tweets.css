@@ -1,0 +1,57 @@
+.tweet {
+  border: 5px solid grey;
+  padding: 0.2em 1em;
+  margin: 3% 0;
+}
+
+.tweet:hover{
+  box-shadow: 5px 4px 3px grey;
+}
+
+.tweet > header > img {
+  max-width: 54px;
+  height: auto;
+}
+
+.tweet > header > img {
+  float: left;
+}
+
+.tweet > header > p {
+ display: flex;
+ justify-content: space-between;
+ padding-top: 10px;
+}
+
+.tweet > header > p > .user-name {
+  margin-left: 1%;
+}
+
+.tweet > header > p > .tweet-tag {
+  color: steelblue;
+  opacity: 0.5;
+}
+
+.tweet:hover header > p > .tweet-tag{
+  opacity: 1;
+}
+
+.tweet > .tweet-message {
+  padding-left: 5px;
+  margin: 3% 0 3% 1%;
+  font-weight: 600;
+}
+
+.tweet > footer {
+  border-top: 5px solid grey;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 1% 0;
+}
+
+.tweet > footer > .tweet-icons > * {
+  color: steelblue;
+  font-size: 18px;
+  padding: 5px;
+}
