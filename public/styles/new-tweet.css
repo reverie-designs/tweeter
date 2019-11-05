@@ -25,3 +25,7 @@
   color: grey;
   float: right;
 }
+
+.turnRed {
+  color: red;
+}
