@@ -14,6 +14,9 @@
   font-weight: 700;
 }
 
+.new-tweet textarea:focus{
+    outline: none;
+}
 .new-tweet form input{
   background-color: #090526;
   color: #FFFF;
