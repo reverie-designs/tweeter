@@ -2,13 +2,11 @@ body > header {
   height: 400px;
   width: 100%;
   margin: auto;
-  background-color: lemonchiffon;
   text-align: center;
-  margin: auto;
   position: relative;
   top: 120px;
-  background-color: DarkSlateGrey;
-  background-image: url(../images/foggy-birds.png);
+  background-color: #bf6f76;
+  background-image: url(../images/low-contrast-linen.png);
   background-repeat: repeat;
   color: white;
 }

@@ -1,18 +1,21 @@
 .new-tweet {
   margin: auto;
- /* display: flex; */
+}
+
+.new-tweet > h2 {
+  color: #090526;
 }
 .new-tweet textarea{
   width: 100%;
   background-color: inherit;
   border: 0px solid;
-  border-bottom: 5px solid grey; 
+  border-bottom: 5px solid #594251; 
   color: grey;
   font-weight: 700;
 }
 
 .new-tweet form input{
-  background-color: #4056A1;
+  background-color: #090526;
   color: #FFFF;
   font-weight: 700;
   font-family: 'Bungee', cursive;

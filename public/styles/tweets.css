@@ -1,5 +1,5 @@
 .tweet {
-  border: 5px solid grey;
+  border: 5px solid #594251;
   padding: 0.2em 1em;
   margin: 3% 0;
 }
@@ -28,7 +28,7 @@
 }
 
 .tweet > header > p > .tweet-tag {
-  color: steelblue;
+  color: #594251;
   opacity: 0.5;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .tweet > footer {
-  border-top: 5px solid grey;
+  border-top: 5px solid #594251;
   display: flex;
   justify-content: space-between;
   font-size: 15px;
@@ -51,7 +51,7 @@
 }
 
 .tweet > footer > .tweet-icons > * {
-  color: steelblue;
+  color: #594251;
   font-size: 18px;
   padding: 5px;
 }
