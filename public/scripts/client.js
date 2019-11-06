@@ -64,12 +64,25 @@ const checkValueOfTweetInput = (input) => {
   }
 };
 
-console.log(checkValueOfTweetInput(null));
+//Function clears the tweet form and delivers the newest tweet to the bottom of the page
+const loadNewTweet = () => {
+  //clears form
+  $('#tweet-form > textarea').val('');
+
+  //gets the latest tweet and appends it to the page
+  $.ajax('/tweets/', { method: 'GET' })
+  .then(function (getTweets) {
+   let newTweet = [];
+   newTweet.push(getTweets[getTweets.length-1]);
+   renderTweets(newTweet);
+  }); 
+}
+
 //==========================================================
 //jQuery rendering of tweets
 $(function(){
 
-  //ajax add tweet to database
+  //ajax add tweet to database on submit
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
     const input = $('#tweet-form > textarea').val();
@@ -81,24 +94,14 @@ $(function(){
         type: 'POST',
         data : $(this).serialize()
       });
+      loadNewTweet();
     } 
   });
-  
-  //ajax get tweet from database
-  $.ajax('/tweets/', { method: 'GET' })
-    .then(function (getTweets) {
-      renderTweets(getTweets);
+
+   //ajax get tweet from database on page load
+   $.ajax('/tweets/', { method: 'GET' })
+   .then(function (getTweets) {
+     renderTweets(getTweets);
   });
   
-  $().on("input", function(){
-    // alert('WOA');
-    const input = $('#tweet-form > textarea').val();
-    // if(inputLength >140){
-    //   alert('TOO MUCH');
-    // }
-    console.log(input);
-    if(input === ' ' || input === null || input.length > 140){
-      alert('TOO MUCH');
-    }
-  });
 });
