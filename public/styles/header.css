@@ -7,7 +7,7 @@ body > header {
   margin: auto;
   position: relative;
   top: 120px;
-  background-color: #020005;
+  background-color: DarkSlateGrey;
   background-image: url(../images/foggy-birds.png);
   background-repeat: repeat;
   color: white;
