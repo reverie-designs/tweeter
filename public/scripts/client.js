@@ -54,26 +54,51 @@ const renderTweets = (tweetDatabase) => {
   }
 };
 
+//returns error message if the tweet input form is empty or exceeds character limit
+const checkValueOfTweetInput = (input) => {
+  if (input === '' || input === null) {
+   return 'please enter a tweet';
+  }
+  if (input.length > 140) {
+    return 'your tweet has exceeded the character limitations. Please adjust your tweet to submit';
+  }
+};
+
+console.log(checkValueOfTweetInput(null));
 //==========================================================
 //jQuery rendering of tweets
 $(function(){
 
   //ajax add tweet to database
-  $('#tweet-form').on('submit', function (event) {
+  $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
-    console.log($(this));
-    $.ajax({
+    const input = $('#tweet-form > textarea').val();
+    if(checkValueOfTweetInput(input)){
+      alert(checkValueOfTweetInput(input));
+    } else {
+      $.ajax({
         url : '/tweets/',
         type: 'POST',
         data : $(this).serialize()
-    });
+      });
+    } 
   });
   
   //ajax get tweet from database
   $.ajax('/tweets/', { method: 'GET' })
     .then(function (getTweets) {
-      console.log('Success: ', getTweets);
       renderTweets(getTweets);
   });
   
+  $().on("input", function(){
+    // alert('WOA');
+    const input = $('#tweet-form > textarea').val();
+    // if(inputLength >140){
+    //   alert('TOO MUCH');
+    // }
+    console.log(input);
+    if(input === ' ' || input === null || input.length > 140){
+      alert('TOO MUCH');
+    }
+  });
 });
