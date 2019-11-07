@@ -33,10 +33,6 @@
   float: right;
 }
 
-.turnRed {
-  color: red;
-}
-
 .new-tweet .error-msg * {
   color: red;
 }

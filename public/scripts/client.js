@@ -66,8 +66,9 @@ const checkValueOfTweetInput = (input) => {
 
 //Function clears the tweet form and delivers the newest tweet to the bottom of the page
 const loadNewTweet = () => {
-  //clears form
+  //clears form and hides error
   $('#tweet-form > textarea').val('');
+  $(".error-msg").slideUp();
   //gets the latest tweet and appends it to the page
   $.ajax('/tweets/', { method: 'GET' })
   .then(function (getTweets) {
@@ -86,7 +87,10 @@ $(function(){
     event.preventDefault();
     const input = $('#tweet-form > textarea').val();
     if(checkValueOfTweetInput(input)){
-      alert(checkValueOfTweetInput(input));
+      const errorMsg = checkValueOfTweetInput(input);
+      $(".error").append(`${errorMsg}`);
+      $(".error-msg").slideToggle("slow");
+      
     } else {
       $.ajax({
         url : '/tweets/',

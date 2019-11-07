@@ -16,10 +16,7 @@
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- Nav CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
-    <!-- Nav CSS -->
+    <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
     <!-- Tweet Form CSS -->
@@ -39,13 +36,18 @@
 
      <!-- Tweet Character Counter JS -->
      <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <!-- From Animation JS -->
+
+     <!-- Top-Button JS -->
+     <script type="text/javascript" src="/scripts/top-button.js"></script>
+
+    <!-- Form Animation JS -->
     <script type="text/javascript" src="/scripts/form-animation.js"></script>
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/096d0c019b.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body id="top">
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="logo">tweeter</span> <span><strong>Write </strong>a new tweet<br> <i class="fas fa-angle-double-down reveal-tweet animated wobble infinite"></i></span>
@@ -66,7 +68,7 @@
     <main class="container">
 
       <section class="new-tweet">
-        <div class="error-msg"><p><i class="fas fa-exclamation-triangle"></i> Some words <i class="fas fa-exclamation-triangle"></i></p></div>
+        <div class="error-msg"><p><i class="fas fa-exclamation-triangle"></i> <span class="error"></span> <i class="fas fa-exclamation-triangle"></i></p></div>
         <h2>Compose Tweet</h2>
         <form id="tweet-form" method="POST" action="/tweets">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
@@ -81,7 +83,8 @@
       </section>
 
     </main>
-
+    
+    <a href="#top" class="icon-top"><i class="far fa-arrow-alt-circle-up"></i></a>
     <footer id="main-footer"><small>Project made by <a href="https://github.com/reverie-designs">Dasha Frumovitch</a> for <a href="https://www.lighthouselabs.ca/">Lighthouse Labs</a></small></footer>
   </body>
 </html>
