@@ -26,12 +26,17 @@ body {
   width: 90%;
   margin: auto;
   position: relative;
-  top: 120px;
+  top: 120px; 
 }
 
 #newTweets {
   margin-top: 2em;
   margin-bottom: 1.5em;
+}
+
+#get-tweets{
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 body > .icon-top {

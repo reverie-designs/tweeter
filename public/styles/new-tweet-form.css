@@ -27,7 +27,14 @@
   text-transform: uppercase;
   padding: 5px 10px;
   cursor: pointer;
+  -webkit-transition: 1s; 
+  transition: 1s;
 }
+
+.new-tweet form input:hover{
+  background-color: #bf6f76;
+}
+
 
 .counter {
   font-family: 'Bungee', cursive;
