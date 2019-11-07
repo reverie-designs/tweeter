@@ -5,7 +5,7 @@
 .new-tweet > h2 {
   color: #090526;
 }
-.new-tweet textarea{
+.new-tweet textarea {
   width: 100%;
   background-color: inherit;
   border: 0px solid;
@@ -14,7 +14,7 @@
   font-weight: 700;
 }
 
-.new-tweet textarea:focus{
+.new-tweet textarea:focus {
     outline: none;
 }
 .new-tweet form input{
@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 
-.counter{
+.counter {
   font-family: 'Bungee', cursive;
   color: grey;
   float: right;
@@ -35,4 +35,12 @@
 
 .turnRed {
   color: red;
+}
+
+.new-tweet .error-msg * {
+  color: red;
+}
+.new-tweet .error-msg p {
+  border: solid red 3px;
+  padding: 0.5em 1em;
 }

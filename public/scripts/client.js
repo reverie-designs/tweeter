@@ -68,7 +68,6 @@ const checkValueOfTweetInput = (input) => {
 const loadNewTweet = () => {
   //clears form
   $('#tweet-form > textarea').val('');
-
   //gets the latest tweet and appends it to the page
   $.ajax('/tweets/', { method: 'GET' })
   .then(function (getTweets) {
@@ -76,7 +75,7 @@ const loadNewTweet = () => {
    newTweet.push(getTweets[getTweets.length-1]);
    renderTweets(newTweet);
   }); 
-}
+};
 
 //==========================================================
 //jQuery rendering of tweets
