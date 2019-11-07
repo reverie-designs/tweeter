@@ -15,10 +15,10 @@ $(function() {
 
     //turn counter red if it hits below zero by adding a class to it
     if($textLength < 0){
-      $($tweetCounter).addClass("turnRed");
+      $($tweetCounter).addClass("turn-red");
     }
     if($textLength > 0) {
-      $($tweetCounter).removeClass("turnRed");
+      $($tweetCounter).removeClass("turn-red");
     }
   });
 

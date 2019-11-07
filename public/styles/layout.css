@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -16,7 +17,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #F2D4C2;
+  background-color: mistyrose;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -33,34 +34,33 @@ body {
   margin-bottom: 1.5em;
 }
 
-body > .icon-top{
-  color: red;
-  font-size: 2em;
+body > .icon-top {
   z-index: 999;
-  cursor: pointer;
   position: fixed;
   bottom: 50px;
   right: 5px;
   cursor: pointer;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: #fff;
+  color: red;
 }
+
 body > .icon-top:hover{
   color: #bf6f76;
 }
 
-body > #main-footer {
-  width: 100%;
-  background-color: #090526;
-  color: #FFFF;
-  clear: both;
-  position: relative;
-  bottom: -120px;
-  text-align: center;
-}
+@media only screen and (min-width: 1050px) {
+  .container{
+    width: 60%;
+    float: right;
+    margin-right: 3%;
+  }
 
-body > #main-footer * a{
-  color: white;
-}
-
-body > #main-footer * a:hover{
-  color: #bf6f76;
+  body > .icon-top {
+    font-size: 1.5em;
+  }
 }
