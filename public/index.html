@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta name="description" content="Miniature Tweeter simulation app.">
+    <meta name="author" content="Dasha Frumovitch">
     <title>Tweeter - Home Page</title>
 
+    
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
@@ -50,15 +55,14 @@
   <body id="top">
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span id="logo">tweeter</span> <span><strong>Write </strong>a new tweet<br> <i class="fas fa-angle-double-down reveal-tweet animated wobble infinite"></i></span>
+      <span id="logo">tweeter</span> <span><strong>Write </strong>a new tweet<br> <i title="write a new tweet" class="fas fa-angle-double-down reveal-tweet animated wobble infinite"></i></span>
     </nav>
 
     <!-- User Info -->
     <header>
-      <div id="userImage">
-          <img src="/images/profile-hex.png"> 
+      <div>
+          <img class="user-image" src="/images/profile-hex.png" alt="Profile image cartoon of Queen of Awesome - Dasha"> 
       </div>
-      <br>
       <div>
           <h2>Queen of Awesome</h2>
       </div>
@@ -84,7 +88,6 @@
 
     </main>
     
-    <a href="#top" class="icon-top"><i class="far fa-arrow-alt-circle-up"></i></a>
-    <footer id="main-footer"><small>Project made by <a href="https://github.com/reverie-designs">Dasha Frumovitch</a> for <a href="https://www.lighthouselabs.ca/">Lighthouse Labs</a></small></footer>
+    <a href="#top" title="back to top" class="icon-top"><i class="fas fa-angle-double-up"></i></a>
   </body>
 </html>

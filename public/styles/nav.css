@@ -1,26 +1,40 @@
-nav {
-  position: fixed;
-  top: 0;
-  left:0;
-  right:0;
-  background-color: #090526;
-  color: #FFFF;
-  height: 120px;
-  z-index: 1000;
-  padding: 1.5em;
-  display: flex;
-  justify-content: space-between;
-}
+  nav {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    height: 120px;
+    background-color: #bf6f76;
+    background-image: url(../images/low-contrast-linen.png);
+    color: #FFFF;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+  }
 
-#logo {
-  font-family: 'Bungee', cursive;
-  font-size: 35px;
-}
+  #logo {
+    font-family: 'Bungee', cursive;
+    font-size: 35px;
+  }
 
-.reveal-tweet {
-  color: crimson;
-  position: relative;
-  left: 50%;
-  cursor: pointer;
-  background-color: none;
-}
+  .reveal-tweet {
+    color: crimson;
+    position: relative;
+    left: 50%;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  @media only screen and (min-width: 1050px) {
+    nav {
+      background-color: #090526;
+      background-image: none;
+    }
+  }
+
+  @media only screen and (max-width: 440px) {
+      nav > #logo, span {
+        font-size: 20px;
+      }
+   }

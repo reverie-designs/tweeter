@@ -1,10 +1,11 @@
 .new-tweet {
-  margin: auto;
+  margin: 5% auto;
 }
 
 .new-tweet > h2 {
   color: #090526;
 }
+
 .new-tweet textarea {
   width: 100%;
   background-color: inherit;
@@ -15,8 +16,9 @@
 }
 
 .new-tweet textarea:focus {
-    outline: none;
+  outline: none;
 }
+
 .new-tweet form input{
   background-color: #090526;
   color: #FFFF;
@@ -36,6 +38,7 @@
 .new-tweet .error-msg * {
   color: red;
 }
+
 .new-tweet .error-msg p {
   border: solid red 3px;
   padding: 0.5em 1em;
