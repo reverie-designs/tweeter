@@ -17,8 +17,10 @@ nav {
   font-size: 35px;
 }
 
-.fa-angle-double-down {
+.reveal-tweet {
   color: crimson;
   position: relative;
   left: 50%;
+  cursor: pointer;
+  background-color: none;
 }

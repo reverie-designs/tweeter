@@ -24,6 +24,7 @@
   font-family: 'Bungee', cursive;
   text-transform: uppercase;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 .counter{
