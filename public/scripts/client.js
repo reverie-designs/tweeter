@@ -5,15 +5,15 @@ const escape = function(str) {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 //function that gets time out of the tweet object and subtracts it from today's date - returns value in days
 const getTimeOfTweet = (milsecs) => {
   let result = [];
   const today = new Date();
-  const timeAgo = (today - milsecs)/86400000;
+  const timeAgo = (today - milsecs) / 86400000;
   
-  result.push(Math.ceil(timeAgo)); 
+  result.push(Math.ceil(timeAgo));
 
   //adds an 's' if it has been more than a single day ago
   if (toString(result[0]).length > 1 || result[0] !== 1) {
@@ -49,7 +49,7 @@ const createTweetElement = (tweetObject)=> {
 
 //for every tweet in tweetDatabase create an html element and append it to the body
 const renderTweets = (tweetDatabase) => {
-  for(let tweet of tweetDatabase){
+  for (let tweet of tweetDatabase) {
     $("#get-tweets").append(createTweetElement(tweet));
   }
 };
@@ -57,7 +57,7 @@ const renderTweets = (tweetDatabase) => {
 //returns error message if the tweet input form is empty or exceeds character limit
 const checkValueOfTweetInput = (input) => {
   if (input === '' || input === null) {
-   return 'please enter a tweet';
+    return 'please enter a tweet';
   }
   if (input.length > 140) {
     return 'your tweet has exceeded the character limitations. Please adjust your tweet to submit';
@@ -68,44 +68,48 @@ const checkValueOfTweetInput = (input) => {
 const loadNewTweet = () => {
   //clears form and hides error
   $('#tweet-form > textarea').val('');
-  $(".error-msg").slideUp();
+
   //gets the latest tweet and appends it to the page
   $.ajax('/tweets/', { method: 'GET' })
-  .then(function (getTweets) {
-   let newTweet = [];
-   newTweet.push(getTweets[getTweets.length-1]);
-   renderTweets(newTweet);
-  }); 
+    .then(function(getTweets) {
+      let newTweet = [];
+      newTweet.push(getTweets[getTweets.length - 1]);
+      renderTweets(newTweet);
+    });
 };
 
-//==========================================================
+
 //jQuery rendering of tweets
-$(function(){
+$(function() {
 
   //ajax add tweet to database on submit
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
     const input = $('#tweet-form > textarea').val();
-    if(checkValueOfTweetInput(input)){
+    if (checkValueOfTweetInput(input)) {
       const errorMsg = checkValueOfTweetInput(input);
+      $(".error").empty();
       $(".error").append(`${errorMsg}`);
-      $(".error-msg").slideToggle("slow");
-      
+      $(".error-msg").slideDown("slow");
     } else {
+      //get tweet data
       $.ajax({
         url : '/tweets/',
         type: 'POST',
         data : $(this).serialize()
-      });
-      loadNewTweet();
-      $(".new-tweet").slideUp("slow");
-    } 
+      })
+        .then(() => {
+          $(".error-msg").slideUp();
+          loadNewTweet();
+          $(".new-tweet").slideUp("slow");
+        });
+    }
   });
 
-   //ajax get tweet from database on page load
-   $.ajax('/tweets/', { method: 'GET' })
-   .then(function (getTweets) {
-     renderTweets(getTweets);
-  });
+  //ajax get tweet from database on page load
+  $.ajax('/tweets/', { method: 'GET' })
+    .then(function(getTweets) {
+      renderTweets(getTweets);
+    });
   
 });

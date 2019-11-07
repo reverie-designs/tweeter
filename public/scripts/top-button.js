@@ -1,12 +1,12 @@
 $(window).scroll(function() {
-  var height = $(window).scrollTop();
+  const height = $(window).scrollTop();
   if (height > 100) {
-      $('.icon-top').fadeIn();
+    $('.icon-top').fadeIn();
   } else {
-      $('.icon-top').fadeOut();
+    $('.icon-top').fadeOut();
   }
 });
 
-$(function(){
+$(function() {
   $('.icon-top').hide();
 });
