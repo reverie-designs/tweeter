@@ -55,6 +55,11 @@
   color: #594251;
   font-size: 18px;
   padding: 5px;
+  opacity: 0.5;
+}
+
+.tweet:hover > footer > .tweet-icons > * {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 440px) {
