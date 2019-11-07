@@ -40,6 +40,7 @@
   padding-left: 5px;
   margin: 3% 0 3% 1%;
   font-weight: 600;
+  overflow-wrap: break-word;
 }
 
 .tweet > footer {

@@ -98,6 +98,7 @@ $(function(){
         data : $(this).serialize()
       });
       loadNewTweet();
+      $(".new-tweet").slideUp("slow");
     } 
   });
 
