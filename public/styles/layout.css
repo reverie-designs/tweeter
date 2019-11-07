@@ -41,6 +41,10 @@ body > .icon-top{
   position: fixed;
   bottom: 50px;
   right: 5px;
+  cursor: pointer;
+}
+body > .icon-top:hover{
+  color: #bf6f76;
 }
 
 body > #main-footer {
