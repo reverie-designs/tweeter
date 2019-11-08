@@ -9,8 +9,8 @@ Enjoy!
 
 ## Final Product
 
-!["Screeshot of Tweet App Desktop View"]()
-!["Screenshot of Tweet App Mobile View"]()
+!["Screeshot of Tweet App Desktop View"](https://github.com/reverie-designs/tweeter/blob/master/docs/tweeter-desktop-view.png)
+!["Screenshot of Tweet App Mobile View"](https://github.com/reverie-designs/tweeter/blob/master/docs/tweeter-mobile-view.png)
 
 ## Dependencies
 
@@ -51,13 +51,13 @@ Enjoy!
 
 ## Styles
 
-1. layout.css - main page layout styles
-2. nav.css - top bar styles
-3. header.css - user box styles
-4. new-tweet-form.css - create a new tweet form styles
-5. tweets.css - loaded tweet styles
+1. *layout.css* - main page layout styles
+2. *nav.css* - top bar styles
+3. *header.css* - user box styles
+4. *new-tweet-form.css* - create a new tweet form styles
+5. *tweets.css* - loaded tweet styles
 
 
-*** All other code has been previously provided by lighthouse labs for this project ***
+** All other code has been previously provided by lighthouse labs for this project **
 
 
