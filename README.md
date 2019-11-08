@@ -44,18 +44,18 @@ Enjoy!
 
 ## Scripts
 
-1. Main front-end javascript file - client.js
-2. Tweet form - form-animation.js
-3. Character counter animation - composer-char-counter.js
-4. Back to top button functionality - top-button.js
+1. _client.js_ - Main front-end javascript file
+2. _form-animation.js_ - Tweet form
+3. _composer-char-counter.js_ - Character counter animation
+4. _top-button.js_ - Back to top button functionality
 
 ## Styles
 
-1. *layout.css* - main page layout styles
-2. *nav.css* - top bar styles
-3. *header.css* - user box styles
-4. *new-tweet-form.css* - create a new tweet form styles
-5. *tweets.css* - loaded tweet styles
+1. _layout.css_ - main page layout styles
+2. _nav.css_ - top bar styles
+3. _header.css_ - user box styles
+4. _new-tweet-form.css_ - create a new tweet form styles
+5. _tweets.css_ - loaded tweet styles
 
 
 ** All other code has been previously provided by lighthouse labs for this project **
