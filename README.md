@@ -9,8 +9,12 @@ Enjoy!
 
 ## Final Product
 
+### Mobile View
+!<img src="https://github.com/reverie-designs/tweeter/blob/master/docs/tweet-mobile-view.png"  alt="Screenshot of Tweet App Mobile View" width="220">
+
+### Desktop View
 !["Screeshot of Tweet App Desktop View"](https://github.com/reverie-designs/tweeter/blob/master/docs/tweeter-desktop-view.png)
-<img src="https://github.com/reverie-designs/tweeter/blob/master/docs/tweet-mobile-view.png"  alt="Screenshot of Tweet App Mobile View" width="440">
+
 
 ## Dependencies
 
