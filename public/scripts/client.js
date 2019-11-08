@@ -57,14 +57,14 @@ const renderTweets = (tweetDatabase) => {
 //returns error message if the tweet input form is empty or exceeds character limit
 const checkValueOfTweetInput = (input) => {
   if (input === '' || input === null) {
-    return 'please enter a tweet';
+    return 'Please enter a tweet!';
   }
   if (input.length > 140) {
-    return 'your tweet has exceeded the character limitations. Please adjust your tweet to submit';
+    return 'Your tweet has exceeded the character limitation of 140 characters. Please adjust to re-submit!';
   }
 };
 
-//Function clears the tweet form and delivers the newest tweet to the bottom of the page
+//Function clears the tweet form and delivers the newest tweet  the page
 const loadNewTweet = () => {
   //clears form and hides error
   $('#tweet-form > textarea').val('');
@@ -86,6 +86,7 @@ $(function() {
   $('#tweet-form').on('submit', function(event) {
     event.preventDefault();
     const input = $('#tweet-form > textarea').val();
+    //if there is an error
     if (checkValueOfTweetInput(input)) {
       const errorMsg = checkValueOfTweetInput(input);
       $(".error").empty();
@@ -98,6 +99,7 @@ $(function() {
         type: 'POST',
         data : $(this).serialize()
       })
+      //remove error msg // load tweet // toggle form
         .then(() => {
           $(".error-msg").slideUp();
           loadNewTweet();
