@@ -64,4 +64,6 @@ Enjoy!
 
 ** All other code has been previously provided by lighthouse labs for this project **
 
+## Troubleshooting
 
+Bear in mind there is a 4 second server side delay (on purpose) before the tweet is rendered
